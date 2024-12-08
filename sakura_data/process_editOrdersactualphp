@@ -1,0 +1,36 @@
+<?php
+
+session_start();
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "sakurashop";
+
+        // Create connection
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+        // Check connection
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+
+    if(isset($_POST['update_submit'])){
+
+    
+    $statis = $_POST['order_status'];
+
+    $sql = "UPDATE customer SET  order_status = '$status' where order_ID = '$order_ID'";
+
+    $query_run = mysqli_query($conn, $sql);
+
+    if($query_run){
+        header('Location: admin_viewCustomers.php');
+        exit(0);
+    }
+}
+
+
+?>
+

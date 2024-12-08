@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAKURA//SERVICES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="headers.css" rel="stylesheet">
+    <link href="heroes.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4"style="border-bottom: 1px solid #c07d9c;" >
+            <div class="col-md-3 mb-2 mb-md-0">
+                <img src="IMAGES/SAKURA.png" alt="Brand Image" style="width: 300px; height: auto;">
+            </div>
+            
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2"><b>HOME</b></a></li>
+                <li class="nav-item dropdown" id="dropdownShop">
+                    <a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdownShop" role="button" aria-haspopup="true" aria-expanded="false">
+                        <b>SHOP</b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg" aria-labelledby="dropdownMenuButton">
+             
+                      <li><h6 class="dropdown-header">Arrangements</h6></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-box"></i> Boxed Flowers</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-basket"></i> Flower Baskets</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-emoji-heart-eyes"></i> Centerpieces</a></li>
+                      <li><hr class="dropdown-divider"></li>
+          
+                      <li><h6 class="dropdown-header">Bouquets</h6></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-flower1"></i> Mixed Bouquets</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-flower2"></i> Seasonal Bouquets</a></li>
+                      <li><hr class="dropdown-divider"></li>
+          
+         
+                      <li><h6 class="dropdown-header">Other Sections</h6></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-stars"></i> Featured</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-lightning-charge-fill"></i> Deals</a></li>
+                  </ul>
+                  
+                </li>
+                <li class="nav-item dropdown" id="dropdownServices">
+                    <a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdownServices" role="button" aria-haspopup="true" aria-expanded="false">
+                        <b>SERVICES</b>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-event"></i> Event Decorating</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-flower1"></i> Bouquet</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-basket2"></i> Basket</a></li>
+                    </ul>
+                    
+                </li>
+            </ul>
+
+    
+            <div class="col-md-3 text-end d-flex align-items-center">
+                <div class="input-group me-3">
+                    <span class="input-group-text" style="background-color: #c07d9c; border: none;">
+                        <i class="bi bi-search" style="color: white;"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="" style="background-color: #ffffff; border: 1px solid #c07d9c;">
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-link d-inline" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-lines-fill fs-4"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i> Profile</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Settings</a></li>
+                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal"><i class="bi bi-person-plus"></i> Sign Up</a></li>
+                  </ul>
+                  
+                  
+                    
+                </div>
+                <a href="#" class="nav-link d-inline ms-3"><i class="bi bi-basket2-fill fs-4"></i></a>
+            </div>
+            
+        </header>
+    </div>
+  
+  
+<!-- HOMEPAGE MODALS-->
+
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel" style="color: #c07d9c; font-weight: bold;"><i class="fas fa-sign-in-alt"></i> Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="mb-3">
+                      <label for="loginEmail" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-envelope"></i> Email address</label>
+                      <input type="email" class="form-control" id="loginEmail" required>
+                  </div>
+                  <div class="mb-3 password-wrapper position-relative">
+                      <label for="loginPassword" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-lock"></i> Password</label>
+                      <div class="input-group">
+                          <input type="password" class="form-control" id="loginPassword" required>
+                          <button class="btn custom" type="button" style="background-color: #9dbab3; color: white;" onclick="togglePasswordVisibility('loginPassword')">
+                              <i class="fas fa-eye-slash"></i>
+                          </button>
+                      </div>
+                      <div class="form-text">
+                          <a href="#" class="text-muted text-decoration-none">Forgot password?</a>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-custom" style="background-color: #9dbab3; color: white;"><b>Login</b></button>
+                  <button type="button" class="btn btn-custom" style="background-color: #809993; color: white;" id="openSignupModal"><b>Create An Account</b></button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel" style="color: #c07d9c; font-weight: bold;"><i class="fas fa-user-plus"></i> Sign Up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Personal Information Section -->
+          <h3 style="color: #c07d9c; font-weight: bold;"><i class="fas fa-info-circle"></i> Your Personal Information</h3>
+          <hr style="border-top: 1px solid #c07d9c;">
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-envelope"></i> Email address</label>
+            <input type="email" class="form-control" id="signupEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupFirstName" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-user"></i> First Name</label>
+            <input type="text" class="form-control" id="signupFirstName" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupLastName" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-user"></i> Last Name</label>
+            <input type="text" class="form-control" id="signupLastName" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupPhoneNumber" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="text" class="form-control" id="signupPhoneNumber" required>
+          </div>
+
+          <!-- Address Section -->
+          <h3 style="color: #c07d9c; font-weight: bold;"><i class="fas fa-map-marker-alt"></i> Your Address Information</h3>
+          <hr style="border-top: 1px solid #c07d9c;">
+          <div class="mb-3">
+            <label for="signupStreetAddress" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-road"></i> Street Address</label>
+            <input type="text" class="form-control" id="signupStreetAddress" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupCity" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-city"></i> City</label>
+            <select class="form-select" id="signupCity" required>
+              <option value="" disabled selected>Select City</option>
+              <option value="Cebu City">Cebu City</option>
+              <option value="Lapu-Lapu City">Lapu-Lapu City</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="signupSpecialIdentifier" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-tag"></i> Location Identifier</label>
+            <input type="text" class="form-control" id="signupSpecialIdentifier" required>
+          </div>
+
+          <!-- Password Section -->
+          <h3 style="color: #c07d9c; font-weight: bold;"><i class="fas fa-key"></i> Your Password</h3>
+          <hr style="border-top: 1px solid #c07d9c;">
+          <div class="mb-3 password-wrapper position-relative">
+            <label for="signupPassword" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-lock"></i> Password</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="signupPassword" required>
+              <button class="btn custom" type="button" style="background-color: #9dbab3; color: white;" onclick="togglePasswordVisibility('signupPassword')">
+                <i class="fas fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="mb-3 password-wrapper position-relative">
+            <label for="signupConfirmPassword" class="form-label" style="font-weight: bold; color: #c07d9c;"><i class="fas fa-lock"></i> Confirm Password</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="signupConfirmPassword" required>
+              <button class="btn custom" type="button" style="background-color: #9dbab3; color: white;" onclick="togglePasswordVisibility('signupConfirmPassword')">
+                <i class="fas fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <input type="checkbox" class="form-check-input" id="agreeTerms">
+            <label class="form-check-label" for="agreeTerms">I have read the <a href="#" style="color: #c07d9c;"><b>terms of service</b></a></label>
+          </div>
+          
+          <div class="mb-3">
+            <button type="submit" class="btn btn-custom" style="background-color: #9dbab3; color: white;"><b>Sign Up</b></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+<div class="modal fade" id="faqsModal" tabindex="-1" aria-labelledby="faqsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel" style="color: #c07d9c; font-weight: bold;">FAQs</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="color: #c07d9c;">
+            <p >Here are some frequently asked questions:</p>
+    <p><b style="opacity: 1;">Q: What types of flowers do you offer?</b></p>
+    <p >A: We offer a wide variety of flowers, including roses, lilies, tulips, daisies, orchids, and more. Our selection ensures you can find the perfect arrangement for any occasion.</p>
+    
+    <p><b style="opacity: 1;">Q: Do you offer same-day delivery?</b></p>
+    <p >A: Yes, we offer same-day delivery for orders placed before noon. This service ensures your flowers arrive fresh and on time, even at short notice.</p>
+    
+    <p><b style="opacity: 1;">Q: Can I customize my bouquet?</b></p>
+    <p >A: Absolutely! You can customize your bouquet to include your favorite flowers and colors. Whether you prefer a classic mix or a unique arrangement, we can tailor it to your specifications.</p>
+    
+    <p><b style="opacity: 1;">Q: What occasions do you provide floral arrangements for?</b></p>
+    <p >A: We provide floral arrangements for a wide range of occasions, including birthdays, anniversaries, weddings, corporate events, and more. Each arrangement is designed to suit the theme and sentiment of the occasion.</p>
+    
+    <p><b style="opacity: 1;">Q: How do I place an order?</b></p>
+    <p>A: You can place an order directly through our website or by contacting our customer service team. Simply browse our selection, choose your desired arrangement, and follow the prompts to complete your order.</p>
+    
+    <p><b style="opacity: 1;">Q: What payment methods do you accept?</b></p>
+    <p >A: We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options. Payment details are encrypted and processed securely to ensure your information remains protected.</p>
+        </div>
+       
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel" style="color: #c07d9c; font-weight: bold;">Terms and Service</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body "  style="color: #c07d9c;">
+            <p><b>Our Terms of Service:</b></p>
+
+            <p><b>1. Delivery times:</b> Delivery estimates are provided but not guaranteed. Factors like weather and traffic may affect delivery schedules.</p>
+            <p><b>2. Substitutions:</b> We reserve the right to substitute flowers of equal or greater value in case of supply shortages or quality concerns. Customers will be notified of substitutions whenever possible.</p>
+            <p><b>3. Accuracy of information:</b> Customers must provide accurate delivery information, including recipient details. Incorrect information may lead to delivery delays or failures.</p>
+            <p><b>4. Reporting issues:</b> Any issues with orders (e.g., damage, incorrect items) must be reported within 24 hours of delivery for prompt resolution.</p>
+            <p><b>5. Price and availability:</b> Prices and product availability may change without prior notice. We strive to maintain accurate information on our website, but errors may occur.</p>
+            <p><b>6. Agreement:</b> By placing an order, you agree to these terms and conditions. Please review them carefully before making a purchase.</p>
+            <p><b>7. Returns and exchanges:</b> We accept returns and exchanges within 24 hours of purchase for items in their original condition. Customers are responsible for return shipping costs.</p>
+            <p><b>8. Refunds:</b> Refunds will be issued to the original form of payment within 7-10 business days after receiving the returned item.</p>
+            <p><b>9. Customer support:</b> Our customer support team is available 24/7 to assist with any questions or concerns regarding your order or our services.</p>
+        </div>
+          </div>
+          
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel" style="color: #c07d9c; font-weight: bold;">Privacy Policy</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="color: #c07d9c;">
+            <p><b style="opacity: 1;">Our Privacy Policy:</b></p>
+            <p>We are committed to protecting your privacy. We use the information we collect about you to process orders, provide customer service, and improve our products and services. This policy outlines how we collect, use, and protect your personal information.</p>
+            <p><b style="opacity: 1;">Information Collection and Use:</b></p>
+            <p>We collect personal information when you register on our site, place an order, subscribe to our newsletter, or fill out a form. This information may include your name, email address, mailing address, phone number, and credit card information. We use this information to process transactions, send periodic emails, and improve our website.</p>
+            <p><b style="opacity: 1;">How We Protect Your Information:</b></p>
+            <p>We implement a variety of security measures to maintain the safety of your personal information when you place an order or enter, submit, or access your personal information. These security measures include encryption, secure server hosting, and regular security audits.</p>
+            <p><b style="opacity: 1;">Disclosure to Third Parties:</b></p>
+            <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, as long as those parties agree to keep this information confidential.</p>
+            <p><b style="opacity: 1;">Changes to Our Privacy Policy:</b></p>
+            <p>We may update this policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We encourage you to review this policy periodically for any changes. Your continued use of our website after any changes indicates your acceptance of those changes.</p>
+     
+          </div>
+          
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="returnsModal" tabindex="-1" aria-labelledby="returnsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel" style="color: #c07d9c; font-weight: bold;">Returns and Refunds</h5>
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="color: #c07d9c; ">
+            <p><b style="opacity: 1;">Our Returns & Refunds Policy:</b></p>
+            <p>If you are not satisfied with your purchase, please contact us within 24 hours of delivery. We will work with you to make it right, including offering a replacement or refund if necessary.</p>
+            <p>Please note that certain conditions apply and not all products are eligible for returns or refunds. For instance, personalized and custom orders cannot be returned unless they arrive damaged or defective.</p>
+            <p>To initiate a return, please follow these steps:</p>
+            <ol>
+                <li>Contact our customer service team via email or phone to request a return authorization.</li>
+                <li>Provide your order number, the reason for the return, and any supporting photographs if the product is damaged or defective.</li>
+                <li>Our team will review your request and provide instructions for returning the item if eligible.</li>
+            </ol>
+            <p>Once your return is received and inspected, we will notify you of the approval or rejection of your refund. If approved, your refund will be processed, and a credit will automatically be applied to your original method of payment within a certain number of days.</p>
+            <p>Exceptions to our return policy include:</p>
+            <ul>
+                <li>Items purchased on sale or clearance.</li>
+                <li>Perishable goods such as flowers and plants that are not returned in their original condition.</li>
+
+            </ul>
+        
+          </div>
+         
+      </div>
+      
+  </div>
+  
+</div>
+
+
+    <!-- START-->
+     
+
+    <div class="mt-0">
+      <div class="p-5 text-center bg-body-tertiary position-relative overflow-hidden">
+          <img src="IMAGES/SERVICEPAGEBANNER.png" class="w-100 position-absolute top-0 start-0 h-100" alt="Full-width background image" style="object-fit: cover; z-index: -1;">
+          <div class="container py-5 position-relative d-flex flex-column justify-content-center align-items-center" style="z-index: 1; height: 100%;">
+              <img src="IMAGES/servicetxt.png" alt="Title Image" class="img-fluid mb-3">
+              <nav aria-label="breadcrumb" class="bg-transparent py-2 breadcrumb-nav">
+                  <ol class="breadcrumb">
+                      Breadcrumb items will be inserted here by JavaScript 
+                  </ol>
+              </nav>
+          </div>
+      </div>
+  </div>
+ 
+  
+
+
+ 
+  
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="IMAGES/FLOWERPICS/collageflower.png" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="1500" height="600" loading="lazy">
+        </div>
+        <div class="col-lg-6 text-color" style="color: #9dbab3; ">
+            
+            <img src="IMAGES/servicetitle.png" class="img-fluid mb-3" style =" margin-left: 50px; ">
+      
+            <p class="lead"><strong>Personalized Bouquets</strong><br>We specialize in creating bespoke bouquets tailored to your preferences. Whether it's for a birthday, anniversary, or any special occasion, our personalized bouquets are designed to leave a lasting impression.</p>
+            <p class="lead"><strong>Personalized Flower Baskets</strong><br>Our beautiful flower baskets are perfect for gifting and home decor. Each basket is thoughtfully arranged with a variety of fresh, vibrant flowers to brighten anyone's day.</p>
+            <p class="lead"><strong>Event Decoration</strong><br>From weddings to corporate events, we provide comprehensive event decoration services. Our team will work closely with you to design and decorate your venue, creating an enchanting atmosphere that perfectly complements your event.</p>
+            <p class="lead">Let us help you celebrate life's moments with the beauty of flowers. Contact us today to discuss your floral needs and let our experts create something truly special for you.</p>
+           
+        </div>
+    </div>
+</div>
+
+  
+     
+
+            <!-- CARDS -->
+            <div class="container" id="featured-3">
+              <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          
+                  <div class="feature col">
+                      <div class="card h-100">
+                          <div class="card-body d-flex flex-column align-items-left">
+                              
+                              <h3 class="card-title fs-2 text-body-emphasis mb-4">
+                                  <i class="bi bi-calendar-event-fill text-body-emphasis me-3"></i>Event Decorating
+                              </h3>
+                              <p class="card-text" style="color: #9dbab3;">Elevate your special occasions with our bespoke occasion catering services. We specialize in crafting floral arrangements tailored to your event's theme and ambiance. From weddings to corporate events, our floral designs enhance every moment with elegance and grace.</p>
+                              <button type="button" class="btn btn-custom mt-auto" data-bs-toggle="modal" data-bs-target="#occasionDecoratingModal" style="background-color: #9dbab3; color: white;">
+                                  <b>Request Service</b>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+          
+               
+                  <div class="feature col">
+                      <div class="card h-100">
+                          <div class="card-body d-flex flex-column align-items-left">
+                              
+                              <h3 class="card-title fs-2 text-body-emphasis mb-4">
+                                  <i class="bi bi-flower1 text-body-emphasis me-3"></i>Bouquet
+                              </h3>
+                              <p class="card-text" style="color: #9dbab3;">Create your perfect bouquet with our customizable bouquet service. Choose from a variety of fresh flowers and colors to tailor a bouquet that matches your unique style and occasion. Whether it's for a wedding, anniversary, or special event, our floral experts ensure every detail reflects your personal taste and sentiment.</p>
+                              <button type="button" class="btn btn-custom mt-auto" data-bs-toggle="modal" data-bs-target="#bouquetModal" style="background-color: #9dbab3; color: white;">
+                                  <b>Request Service</b>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+          
+                  <div class="feature col">
+                      <div class="card h-100">
+                          <div class="card-body d-flex flex-column align-items-left">
+                              <h3 class="card-title fs-2 text-body-emphasis mb-4">
+                                  <i class="bi bi-basket2-fill text-body-emphasis me-3"></i>Basket
+                              </h3>
+                              <p class="card-text" style="color: #9dbab3;">Design your ideal gift basket with our personalized basket service. Select from a range of gourmet treats, artisanal goods, and specialty items to create a customized gift that suits any occasion. Whether it's for holidays, corporate gifts, or special celebrations, our curated baskets ensure your thoughtful gesture stands out.</p>
+                              <button type="button" class="btn btn-custom mt-auto" data-bs-toggle="modal" data-bs-target="#basketModal" style="background-color: #9dbab3; color: white;">
+                                  <b>Request Service</b>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+    
+           <!-- MODAL FORMS -->
+           <div class="modal fade" id="occasionDecoratingModal" tabindex="-1" aria-labelledby="occasionDecoratingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="occasionDecoratingModalLabel" style="color: #c07d9c; font-weight: bold;">
+                    <i class="fas fa-paint-brush"></i> Request Event Decorating
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="occasionType" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-glass-cheers"></i> Occasion Type
+                      </label>
+                      <select class="form-select" id="occasionType" required style="color: #c07d9c;">
+                        <option value="wedding">Wedding</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="corporate">Corporate Event</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="decoratingLocation" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-map-marker-alt"></i> Location
+                      </label>
+                      <input type="text" class="form-control" id="decoratingLocation" style="color: #c07d9c;">
+                      <div class="form-text text-muted" style="color: #c07d9c;">Optional</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="eventDate" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-calendar-alt"></i> Date
+                      </label>
+                      <input type="date" class="form-control" id="eventDate" required style="color: #c07d9c;">
+                    </div>
+                    <div class="mb-3">
+                      <label for="decoratingTheme" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-palette"></i> Flower Theme
+                      </label>
+                      <select class="form-select" id="decoratingTheme" style="color: #c07d9c;">
+                        
+                        <option value="rose">Rose Garden</option>
+                        <option value="tulip">Tulip Paradise</option>
+                        <option value="lily">Lily Serenity</option>
+                        <option value="daisy">Daisy Delight</option>
+                        <option value="orchid">Orchid Oasis</option>
+                        <option value="sunflower">Sunflower Bliss</option>
+                        <option value="carnation">Carnation Cascade</option>
+                        <option value="customTheme">Custom Theme</option>
+                     
+                      </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="decoratingMessage" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-envelope"></i> Message
+                      </label>
+                      <textarea class="form-control" id="decoratingMessage" rows="3" style="color: #c07d9c;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-custom" style="background-color: #9dbab3; color: white;"><b>Submit</b></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="bouquetModal" tabindex="-1" aria-labelledby="bouquetModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg"> 
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="bouquetModalLabel" style="color: #c07d9c; font-weight: bold;"><i class="fas fa-gift"></i> Request Bouquet Service</h5>
+              
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Form content for bouquet service -->
+                  <form>
+                    <div class="mb-3">
+                      <label for="paymentMethod" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-money-bill-wave"></i> Payment
+                      </label>
+                      <select class="form-select" id="paymentMethod" required style="color: #c07d9c;">
+                        <option value="cash-on-delivery">Cash on delivery</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="quantityOrder" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-box"></i> Quantity
+                      </label>
+                      <div class="input-group">
+            
+                        <input type="number" class="form-control" id="quantityOrder" style="color: #c07d9c;" min="1" step="1">
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="mb-3">
+                      <label for="bouquetLocation" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-map-marker-alt"></i> Location
+                      </label>
+                      <input type="text" class="form-control" id="bouquetLocation" style="color: #c07d9c;">
+                      <div class="form-text text-muted" style="color: #c07d9c;">Optional</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="bouquetDate" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-calendar-alt"></i> Date
+                      </label>
+                      <input type="date" class="form-control" id="bouquetDate" required style="color: #c07d9c;">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-seedling"></i> Flower Arrangement
+                      </label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="random-flower" id="customItem">
+                        <label class="form-check-label" for="customItem" style="color: #c07d9c;">
+                          Custom Item
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="roses" id="roses">
+                        <label class="form-check-label" for="roses" style="color: #c07d9c;">
+                          Roses
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="tulips" id="tulips">
+                        <label class="form-check-label" for="tulips" style="color: #c07d9c;">
+                          Tulips
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="lilies" id="lilies">
+                        <label class="form-check-label" for="lilies" style="color: #c07d9c;">
+                          Lilies
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="daisies" id="daisies">
+                        <label class="form-check-label" for="daisies" style="color: #c07d9c;">
+                          Daisies
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="orchids" id="orchids">
+                        <label class="form-check-label" for="orchids" style="color: #c07d9c;">
+                          Orchids
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="sunflowers" id="sunflowers">
+                        <label class="form-check-label" for="sunflowers" style="color: #c07d9c;">
+                          Sunflowers
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="carnations" id="carnations">
+                        <label class="form-check-label" for="carnations" style="color: #c07d9c;">
+                          Carnations
+                        </label>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="bouquetMessage" class="form-label" style="color: #c07d9c; font-weight: bold;"> <i class="fas fa-envelope"></i> Message</label>
+                      
+                      <textarea class="form-control" id="bouquetMessage" rows="3" style="color: #c07d9c;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-custom" style="background-color: #9dbab3; color: white;"><b>Submit</b></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+
+         
+          <div class="modal fade" id="basketModal" tabindex="-1" aria-labelledby="basketModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="basketModalLabel" style="color: #c07d9c; font-weight: bold;">
+                    <i class="fas fa-shopping-basket"></i> Request Basket Service
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Form content for basket service -->
+                  <form>
+                    <div class="mb-3">
+                      <label for="basketPaymentMethod" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-money-bill-wave"></i> Payment
+                      </label>
+                      <select class="form-select" id="basketPaymentMethod" required style="color: #c07d9c;">
+                        <option value="cash-on-delivery">Cash on delivery</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="quantityOrder" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-box"></i> Quantity
+                      </label>
+                      <div class="input-group">
+            
+                        <input type="number" class="form-control" id="quantityOrder" style="color: #c07d9c;" min="1" step="1">
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="basketLocation" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-map-marker-alt"></i> Location
+                      </label>
+                      <input type="text" class="form-control" id="basketLocation" style="color: #c07d9c;">
+                      <div class="form-text text-muted" style="color: #c07d9c;">Optional</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="basketDate" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-calendar-alt"></i> Date
+                      </label>
+                      <input type="date" class="form-control" id="basketDate" required style="color: #c07d9c;">
+                    </div>
+                 
+                    <div class="row">
+                      <div class="col-md-6">
+                          <div class="mb-3">
+                              <label class="form-label" style="color: #c07d9c; font-weight: bold;">
+                                  <i class="fas fa-apple-alt"></i> Basket Contents
+                              </label>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="random-item" id="randomItem">
+                                  <label class="form-check-label" for="randomItem" style="color: #c07d9c;">
+                                      Custom Item
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="fruit" id="fruit">
+                                  <label class="form-check-label" for="fruit" style="color: #c07d9c;">
+                                      Fruit 
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="chocolates" id="chocolates">
+                                  <label class="form-check-label" for="chocolates" style="color: #c07d9c;">
+                                      Chocolate
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="cheese" id="cheese">
+                                  <label class="form-check-label" for="cheese" style="color: #c07d9c;">
+                                      Cheese 
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="wine" id="wine">
+                                  <label class="form-check-label" for="wine" style="color: #c07d9c;">
+                                      Wine 
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="mb-3">
+                              <label class="form-label" style="color: #c07d9c; font-weight: bold;">
+                                  <i class="fas fa-seedling"></i> Flower Arrangement
+                              </label>
+                             
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="roses" id="roses">
+                                  <label class="form-check-label" for="roses" style="color: #c07d9c;">
+                                      Roses
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="tulips" id="tulips">
+                                  <label class="form-check-label" for="tulips" style="color: #c07d9c;">
+                                      Tulips
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="lilies" id="lilies">
+                                  <label class="form-check-label" for="lilies" style="color: #c07d9c;">
+                                      Lilies
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="daisies" id="daisies">
+                                  <label class="form-check-label" for="daisies" style="color: #c07d9c;">
+                                      Daisies
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="orchids" id="orchids">
+                                  <label class="form-check-label" for="orchids" style="color: #c07d9c;">
+                                      Orchids
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="sunflowers" id="sunflowers">
+                                  <label class="form-check-label" for="sunflowers" style="color: #c07d9c;">
+                                      Sunflowers
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="carnations" id="carnations">
+                                  <label class="form-check-label" for="carnations" style="color: #c07d9c;">
+                                      Carnations
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                    <div class="mb-3">
+                      <label for="basketMessage" class="form-label" style="color: #c07d9c; font-weight: bold;">
+                        <i class="fas fa-envelope"></i> Message
+                      </label>
+                      <textarea class="form-control" id="basketMessage" rows="3" style="color: #c07d9c;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-custom" style="background-color: #9dbab3; color: white;"><b>Submit</b></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+
+
+
+      
+
+
+<div class="container" style="border-top: 1px solid #c07d9c;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5 style="color: #c07d9c;"><b><i class="bi bi-geo-alt-fill"></i> CONTACT INFORMATION</b></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Address: Banilad, Cebu</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Phone: +1234567890</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Email: sakuraflowershop@gmail.com</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5 style="color: #c07d9c;"><B><i class="bi bi-link-45deg"></i> QUICK LINKS</B></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shop</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5 style="color: #c07d9c;"><b><i class="bi bi-grid-3x3-gap-fill"></i> OTHER SECTIONS</b></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#faqsModal">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#returnsModal">Returns & Refunds</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5 style="color: #c07d9c;"><b>Subscribe to our newsletter <i class="bi bi-envelope-fill"></i></b></h5>
+              <p style= "color:#9dbab3 ;">Stay updated with our latest promotions and products.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="">
+                <button type="submit" class="btn btn-custom" style="background-color: #9dbab3; color: white;"><b>Subscribe</b></button>
+
+                 
+                  </a>
+                  
+              </div>
+            </form>
+          </div>
+        </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p style="color: #c07d9c;">&copy; 2024 Sakura Flower Shop, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-twitter"></i></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-instagram"></i></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-facebook"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  
+
+        
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
